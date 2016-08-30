@@ -5,9 +5,8 @@
              '("\\.js\\'" . js2-mode)
              )
 ;;jsx file config
-(require 'jsx-mode)
 (add-to-list 'auto-mode-alist
-             '("\\.jsx\\'" . jsx-mode)
+             '("\\.jsx\\'" . web-mode)
              )
 
 ;;web-mode config
