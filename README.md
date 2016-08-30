@@ -1,12 +1,17 @@
-# emacs
+# Emacs init file
 
-首先寻找env-HOME/.emacs，没有就去找env-home/.emacs.d/init.el
+Emacs first try to find envHome/.emacs, then it trys to find envHome/.emacs.d/init.el.
+EnvHome can be viewed by `C-x d ~`.
 
-这里我们采用init.el的方式，以方便拓展
+Here we use .emacs file to config our Emacs.
 
-Package统一放在/.emacs.d/packages里面（elpa安装的包除外），使用时要先load，再require
+# Package load and require
 
-load是靠load-path完成的，所以要把/.emacs.d/packages目录加到load-path里去
+Packages are placed in /.emacs.d/lisp directory, to use a new package, you should first load the package, then require it.
+The process is like this:
 
-
-
+```lisp
+;; this is .emacs file
+(add-to-list 'load-path "~/.emacs/lisp")
+(require 'jsx-mode)
+```
